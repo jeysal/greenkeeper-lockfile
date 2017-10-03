@@ -9,9 +9,9 @@ module.exports = {
   branchName: env.TRAVIS_BRANCH,
   // Is this the first push on this branch
   // i.e. the Greenkeeper commit
-  firstPush: !env.TRAVIS_COMMIT_RANGE,
+  firstPush: true,
   // Is this a regular build
   correctBuild: env.TRAVIS_PULL_REQUEST === 'false',
   // Should the lockfile be uploaded from this build
-  uploadBuild: env.TRAVIS_JOB_NUMBER.endsWith(`.${env.BUILD_LEADER_ID || 1}`)
+  uploadBuild: true
 }
